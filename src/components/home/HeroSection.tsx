@@ -77,13 +77,13 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/45" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto pt-24">
+      <div className="relative z-10 flex flex-col items-center text-center px-8 max-w-4xl mx-auto pt-24">
         <motion.h1
           custom={0.1}
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="font-serif text-[clamp(2.5rem,8vw,8rem)] font-light leading-[1.05] tracking-tight text-[#F8F8F5] whitespace-nowrap"
+          className="font-serif text-[clamp(2.5rem,8vw,8rem)] font-light leading-[1.05] tracking-tight text-[#F8F8F5] sm:whitespace-nowrap"
         >
           Travel Beyond Tourism.
         </motion.h1>

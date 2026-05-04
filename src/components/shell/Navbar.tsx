@@ -41,7 +41,7 @@ export default function Navbar() {
           scrolled ? "bg-[#050505]" : "bg-black/30 backdrop-blur-sm"
         }`}
       >
-        <div className="w-full max-w-[1280px] mx-auto px-0 flex items-center justify-between">
+        <div className="w-full max-w-[1280px] mx-auto px-5 md:px-0 flex items-center justify-between">
           <a href="/" aria-label="True Culture Tours home">
             <Logo />
           </a>
