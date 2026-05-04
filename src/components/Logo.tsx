@@ -4,11 +4,11 @@ interface LogoProps {
 }
 
 export default function Logo({ className = "", size = "md" }: LogoProps) {
-  const w = size === "sm" ? 32 : 40;
-  const h = size === "sm" ? 38 : 48;
-  const titleSize = size === "sm" ? "text-[9px]" : "text-[11px]";
-  const subtitleSize = size === "sm" ? "text-[7px]" : "text-[9px]";
-  const lineW = size === "sm" ? "w-2.5" : "w-3";
+  const w = size === "sm" ? 36 : 48;
+  const h = size === "sm" ? 44 : 58;
+  const titleSize = size === "sm" ? "text-[11px]" : "text-[14px]";
+  const subtitleSize = size === "sm" ? "text-[9px]" : "text-[11px]";
+  const lineW = size === "sm" ? "w-3" : "w-4";
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>

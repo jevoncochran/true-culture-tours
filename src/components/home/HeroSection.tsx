@@ -58,25 +58,32 @@ function HeroOrnament() {
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center">
-      {/* Background image — place your hero photo at /public/hero-bg.jpg */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
-      />
-      {/* Cinematic gradient fallback */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1c1208] via-[#0d0c0a] to-[#050505]" />
+    <section className="relative h-screen min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="https://pub-2b760584230e42dbb44c98d7d0ee442e.r2.dev/true_culture_tours_hero_poster.jpg"
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source
+          src="https://pub-2b760584230e42dbb44c98d7d0ee442e.r2.dev/true_culture_tours_hero_video.mp4"
+          type="video/mp4"
+        />
+      </video>
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/45" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto pt-20">
+      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto pt-24">
         <motion.h1
           custom={0.1}
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="font-serif text-[clamp(3rem,9vw,7rem)] font-light leading-[1.05] tracking-tight text-[#F8F8F5]"
+          className="font-serif text-[clamp(2.5rem,8vw,8rem)] font-light leading-[1.05] tracking-tight text-[#F8F8F5] whitespace-nowrap"
         >
           Travel Beyond Tourism.
         </motion.h1>
@@ -86,9 +93,11 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="my-6"
+          className="my-6 flex items-center gap-4"
         >
+          <div className="h-px w-48 bg-[#C8A04D]" />
           <HeroOrnament />
+          <div className="h-px w-48 bg-[#C8A04D]" />
         </motion.div>
 
         <motion.p
@@ -96,7 +105,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="font-sans text-base md:text-lg text-[#F8F8F5]/90 leading-relaxed max-w-xl"
+          className="font-sans text-lg md:text-xl text-[#F8F8F5]/90 leading-relaxed max-w-2xl"
         >
           Immersive cultural journeys rooted in authenticity,
           <br className="hidden sm:block" /> connection, and unforgettable
