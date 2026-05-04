@@ -11,7 +11,7 @@ type AsLink = BaseProps &
 type ButtonProps = AsButton | AsLink;
 
 const base =
-  "inline-flex items-center justify-center gap-2 px-8 py-4 text-xs font-semibold tracking-[0.08em] uppercase transition-all duration-300 cursor-pointer";
+  "inline-flex items-center justify-center gap-2 px-10 py-5 text-sm font-semibold tracking-[0.08em] uppercase transition-all duration-300 cursor-pointer";
 
 const variants: Record<Variant, string> = {
   primary:
