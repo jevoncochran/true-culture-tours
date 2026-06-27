@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Logo from "@/components/Logo";
 import MobileMenu from "@/components/shell/MobileMenu";
 import {
@@ -18,8 +19,16 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { Icon: InstagramIcon, href: "#", label: "Instagram" },
-  { Icon: TikTokIcon, href: "#", label: "TikTok" },
+  {
+    Icon: InstagramIcon,
+    href: "https://www.instagram.com/trueculturetours",
+    label: "Instagram",
+  },
+  {
+    Icon: TikTokIcon,
+    href: "https://www.tiktok.com/@trueculturetours",
+    label: "TikTok",
+  },
   { Icon: FacebookIcon, href: "#", label: "Facebook" },
   { Icon: YouTubeIcon, href: "#", label: "YouTube" },
 ];
@@ -27,6 +36,7 @@ const socialLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -52,13 +62,17 @@ export default function Navbar() {
               <a
                 key={label}
                 href={href}
-                className="font-sans text-[13px] tracking-[0.15em] uppercase text-[#F8F8F5] hover:text-[#C8A04D] transition-colors duration-200"
+                className={`font-sans text-[13px] tracking-[0.15em] uppercase transition-colors duration-200 border-b pb-0.5 ${
+                  pathname === href
+                    ? "text-[#C8A04D] border-[#C8A04D]"
+                    : "text-[#F8F8F5] border-transparent hover:text-[#C8A04D]"
+                }`}
               >
                 {label}
               </a>
             ))}
             <a
-              href="#book"
+              href="/book"
               className="font-sans text-[13px] tracking-[0.15em] uppercase text-[#C8A04D] border border-[#C8A04D] px-6 py-3 hover:bg-[#C8A04D] hover:text-[#050505] transition-all duration-200"
             >
               Book Now

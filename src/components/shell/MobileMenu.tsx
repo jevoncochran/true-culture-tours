@@ -81,7 +81,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
             <div className="w-full mt-8">
               <a
-                href="#book"
+                href="/book"
                 onClick={onClose}
                 className="block w-full py-5 text-center font-sans text-xs font-semibold tracking-[0.15em] uppercase bg-[#C8A04D] text-[#050505] hover:brightness-110 transition-all"
               >

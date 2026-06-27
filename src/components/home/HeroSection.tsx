@@ -117,10 +117,10 @@ export default function HeroSection() {
           variants={fadeUp}
           className="flex flex-col sm:flex-row gap-4 mt-10 w-full sm:w-auto"
         >
-          <Button variant="primary" href="#experience" className="w-full sm:w-auto">
+          <Button variant="primary" href="/experience" className="w-full sm:w-auto">
             Explore Tours&nbsp;&nbsp;→
           </Button>
-          <Button variant="secondary" href="#book" className="w-full sm:w-auto">
+          <Button variant="secondary" href="/book" className="w-full sm:w-auto">
             Book Now&nbsp;&nbsp;→
           </Button>
         </motion.div>
