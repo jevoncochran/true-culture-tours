@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/shell/Navbar";
+import Footer from "@/components/shell/Footer";
 
 export const metadata: Metadata = {
   title: "True Culture Tours — Travel Beyond Tourism",
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className="bg-[#050505] text-[#F8F8F5] antialiased">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -39,7 +39,7 @@ export const hosts: Host[] = [
       "Fluent in both English and Spanish, he serves as a bridge between travelers and the local communities they encounter.",
     ],
     languages: "Fluent in English & Spanish",
-    image: "",
+    image: "/images/about/edi_moya-2.jpg",
     imageAlt: "Edi Moya",
     photoSide: "right",
   },

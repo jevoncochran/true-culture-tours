@@ -68,17 +68,10 @@ export default function HostCard({ host }: { host: Host }) {
 
   return (
     <div className={`grid grid-cols-1 gap-6 md:gap-10 ${host.photoSide === "left" ? "md:grid-cols-[360px_1fr]" : "md:grid-cols-[1fr_360px]"}`}>
-      {host.photoSide === "left" ? (
-        <>
-          {photo}
-          {content}
-        </>
-      ) : (
-        <>
-          {content}
-          {photo}
-        </>
-      )}
+      {/* Photo is always first in the DOM so it stacks on top on mobile;
+          on desktop, order utilities restore the correct left/right side. */}
+      <div className={host.photoSide === "left" ? "" : "md:order-2"}>{photo}</div>
+      <div className={host.photoSide === "left" ? "" : "md:order-1"}>{content}</div>
     </div>
   );
 }

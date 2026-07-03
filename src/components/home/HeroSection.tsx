@@ -12,50 +12,6 @@ const fadeUp = {
   }),
 };
 
-function HeroOrnament() {
-  return (
-    <svg
-      width="36"
-      height="44"
-      viewBox="0 0 40 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M20 1 L38 7 L38 27 Q38 40 20 47 Q2 40 2 27 L2 7 Z"
-        stroke="#C8A04D"
-        strokeWidth="0.8"
-        fill="none"
-        opacity="0.35"
-      />
-      <line x1="20" y1="5" x2="20" y2="37" stroke="#C8A04D" strokeWidth="1.2" />
-      <line x1="13" y1="11" x2="13" y2="22" stroke="#C8A04D" strokeWidth="1.2" />
-      <line x1="27" y1="11" x2="27" y2="22" stroke="#C8A04D" strokeWidth="1.2" />
-      <path
-        d="M11 5 L13 11 L15 5"
-        stroke="#C8A04D"
-        strokeWidth="1.2"
-        fill="none"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M25 5 L27 11 L29 5"
-        stroke="#C8A04D"
-        strokeWidth="1.2"
-        fill="none"
-        strokeLinejoin="round"
-      />
-      <line x1="13" y1="22" x2="27" y2="22" stroke="#C8A04D" strokeWidth="1.2" />
-      <path
-        d="M16 37 L20 43 L24 37"
-        stroke="#C8A04D"
-        strokeWidth="1.2"
-        fill="none"
-      />
-    </svg>
-  );
-}
-
 export default function HeroSection() {
   return (
     <section className="relative h-[100dvh] min-h-[100dvh] flex items-center justify-center overflow-hidden">
@@ -93,11 +49,9 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="my-6 flex items-center gap-4"
+          className="my-6 flex items-center justify-center"
         >
-          <div className="h-px w-16 sm:w-48 bg-[#C8A04D]" />
-          <HeroOrnament />
-          <div className="h-px w-16 sm:w-48 bg-[#C8A04D]" />
+          <div className="h-px w-32 sm:w-64 bg-[#C8A04D]" />
         </motion.div>
 
         <motion.p
